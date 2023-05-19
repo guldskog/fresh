@@ -2,6 +2,8 @@ import { Head } from "$fresh/runtime.ts";
 import Counter from "../islands/Counter.tsx";
 
 export default function Home() {
+  const name = Deno.env.get("NAME");
+
   return (
     <>
       <Head>
@@ -14,6 +16,7 @@ export default function Home() {
           alt="the fresh logo: a sliced lemon dripping with juice"
         />
         <p class="my-6">
+          {name}
           Welcome to `fresh`. Try updating this message in the
           ./routes/index.tsx file, and refresh.
         </p>
